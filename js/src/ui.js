@@ -64,12 +64,12 @@ Vue.component("question", {
     },
     template: `
         <div class="field is-horizontal">
-            <div class="Tahua-field-label">
+            <div class="Main-field-label">
                 <label class="label">
                     <slot name="label"></slot>
                 </label>
             </div>
-            <div class="field-body Tahua-field"><slot name="pre-input"></slot><div class="control" ref="input"><slot name="input"></slot></div><slot name="info"></slot></div>
+            <div class="field-body Main-field"><slot name="pre-input"></slot><div class="control" ref="input"><slot name="input"></slot></div><slot name="info"></slot></div>
         </div>
     `
 })

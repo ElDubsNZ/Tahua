@@ -1,7 +1,7 @@
 Vue.component("tab-list", {
     props: ["route",],
     computed: {
-        get() {return TahuaStore.getters},
+        get() {return Store.getters},
         tab_home() {return this.get.tab_home},
         tab_expenses() {return this.get.tab_expenses}
     },
@@ -14,12 +14,12 @@ Vue.component("tab-list", {
 })
 Vue.component("budget-start", {
     computed: {
-        get() {return TahuaStore.getters}
+        get() {return Store.getters}
     },
     methods: {
         goTo_Expenses() {
-            TahuaStore.commit("tab_expenses", true)
-            Tahua._router.push({name: 'Expenses'})
+            Store.commit("tab_expenses", true)
+            Main._router.push({name: 'Expenses'})
         }
     },
     template: `
@@ -47,7 +47,7 @@ Vue.component("budget-start", {
 })
 Vue.component("budget-expenses", {
     computed: {
-        get() {return MINIStore.getters}
+        get() {return Store.getters}
     },
     template: `
         <div>
